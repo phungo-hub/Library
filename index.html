@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/4846f4e74e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="bootstrap.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1 class="text-center"> 
+        <i class="fas fa-book-open text-primary"></i> My
+        <span class="text-primary">Book</span> List</h1>
+
+        <form id="book-form">
+            <fieldset>
+                <legend>Please enter book info</legend>
+                <div class="form-group">
+                    <label for="book-title" class="form-label mt-4">Book Title</label>   
+                    <input type="text" name="book-title" id="book-title" class="form-control">   
+                </div>
+                <div class="form-group">
+                    <label for="author" class="form-label mt-4">Author</label>
+                    <input type="text" class="form-control" id="author">
+                </div>
+               <div class="form-group">
+                   <label for="pages" class="form-label mt-4">Number of pages</label>
+                   <input type="number" name="pages" id="pages" class="form-control">
+               </div>
+               
+                <div class="form-group">
+                    <legend class="mt-4">Have you read the book?</legend>
+                    <div class="form-check">
+                        <label class="form-check-label">
+                          <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="yes" checked="">
+                          Yes
+                        </label>
+                      </div>
+                    <div class="form-check">
+                    <label class="form-check-label">
+                        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="no">
+                        No
+                    </label>
+                    </div>
+                </div> 
+            </fieldset>
+            
+        </form>
+        <button type="submit" class="btn btn-primary form-control mt-4" 
+        onclick="addBookToLibrary()">Add Book</button>
+        <table class="table table-hover mt-5">
+            <thead>
+                <tr>
+                    <th scope="col">Book Title</th>
+                    <th scope="col">Author</th>
+                    <th scope="col">Pages</th>
+                    <th scope="col">Read</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
